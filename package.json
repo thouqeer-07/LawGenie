@@ -2,12 +2,16 @@
   "name": "lawgenie-root",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "backend": "cd backend && npm run dev",
-    "frontend": "cd frontend && npm run dev",
+    "install-all": "npm install",
+    "backend": "npm run dev -w backend",
+    "frontend": "npm run dev -w frontend",
     "dev": "npx concurrently \"npm run backend\" \"npm run frontend\"",
-    "build": "cd frontend && npm install && npm run build"
+    "build": "npm run build -w frontend"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
