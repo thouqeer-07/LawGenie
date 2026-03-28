@@ -6,7 +6,8 @@
     "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "backend": "cd backend && npm run dev",
     "frontend": "cd frontend && npm run dev",
-    "dev": "npx concurrently \"npm run backend\" \"npm run frontend\""
+    "dev": "npx concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "cd frontend && npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

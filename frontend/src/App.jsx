@@ -16,7 +16,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/law', {
+      const response = await fetch('/api/law', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
