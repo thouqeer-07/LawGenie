@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LawGenie - AI Legal Assistant for Indian Laws
 
 LawGenie is an AI-powered legal assistant that helps users understand Indian laws and acts Based on real-life scenarios.
@@ -27,3 +28,6 @@ LawGenie is an AI-powered legal assistant that helps users understand Indian law
 - Backend: Node.js, Express
 - AI: Google Gemini AI API
 - Styling: Plain CSS
+=======
+# LawGenie
+>>>>>>> 95784c8ca336cb6f872ae5ee5b30c4372fa7b6a3
