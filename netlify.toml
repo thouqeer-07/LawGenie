@@ -3,8 +3,6 @@
   functions = "netlify/functions"
   publish = "frontend/dist"
 
-[functions]
-  node_bundle = true
 
 [[redirects]]
   from = "/api/*"
