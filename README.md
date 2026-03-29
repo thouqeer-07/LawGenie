@@ -5,6 +5,14 @@ LawGenie transforms complex legal jargon into simple, actionable insights based 
 
 ---
 
+## 🎯 Purpose
+
+A vast majority of the general public is unaware of their legal rights, acts, and specific laws. Due to this lack of awareness, many people suffer silently or end up paying exorbitant fees to advocates simply to understand basic legal rules. 
+
+**LawGenie** was built to bridge this gap. By making legal knowledge instantly accessible, simple to understand, and free of unnecessary jargon, it empowers everyday citizens to confidently understand their legal standing and actionable next steps.
+
+---
+
 ## 🚀 Overview
 
 **LawGenie** is an AI-powered legal assistant designed to help users navigate Indian legal systems effortlessly.  
