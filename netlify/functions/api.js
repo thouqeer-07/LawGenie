@@ -81,11 +81,44 @@ The user may not know legal terms. Keep explanations easy and practical.
 
     const jsonStr = text.startsWith('```') ? text.replace(/```json\n|```/g, '') : text;
     const parsedData = JSON.parse(jsonStr);
-
     res.json(parsedData);
   } catch (error) {
     console.error('Error calling Gemini:', error);
     res.status(500).json({ error: 'Failed to process scenario. Please try again.' });
+  }
+});
+
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
+app.post('/api/chat', async (req, res) => {
+  const { message, history } = req.body;
+
+  if (!message) {
+    return res.status(400).json({ error: 'Message is required' });
+  }
+
+  try {
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.5-flash",
+    });
+
+    const chat = model.startChat({
+      history: history || [],
+    });
+
+    const result = await chat.sendMessage(message);
+    const response = await result.response;
+    const text = response.text();
+
+    res.json({ response: text });
+  } catch (error) {
+    console.error('Error in chat:', error);
+    if (error.response) {
+      console.error('Gemini API Error details:', error.response);
+    }
+    res.status(500).json({ error: 'Failed to send message. Please try again.' });
   }
 });
 
